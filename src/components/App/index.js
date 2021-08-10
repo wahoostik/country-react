@@ -1,14 +1,16 @@
 import Home from '../../pages/Homes';
+import NotFound from '../../pages/NotFound';
+import About from '../../pages/About';
+import { Switch, Route } from 'react-router-dom';
 import './styles.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Country in the World</h1>
-        <Home />
-      </header>
-    </div>
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/a-propos" exact component={About} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 

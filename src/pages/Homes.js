@@ -1,6 +1,6 @@
 const Home = () => (
-  <div className='home'>
-    <h1>Composant : Home</h1>
+  <div>
+    <h1>Page Home</h1>
   </div>
 );
 

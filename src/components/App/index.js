@@ -2,7 +2,6 @@ import Home from '../../pages/Homes';
 import NotFound from '../../pages/NotFound';
 import About from '../../pages/About';
 import { Switch, Route } from 'react-router-dom';
-import './styles.scss';
 
 function App() {
   return (

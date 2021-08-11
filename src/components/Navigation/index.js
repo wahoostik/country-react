@@ -1,15 +1,13 @@
 // == Import
 import { NavLink } from 'react-router-dom';
-import './styles.scss';
 
 // == Composant
 const Navigation = () => (
 <div className='navigation'>
-    <h1>Composant : Navigation</h1>
-    <NavLink exact to="/">
+    <NavLink exact to="/" activeClassName="nav-active">
         Accueil
     </NavLink>
-    <NavLink exact to="a-propos">
+    <NavLink exact to="a-propos" activeClassName="nav-active">
         A propos
     </NavLink>
 </div>

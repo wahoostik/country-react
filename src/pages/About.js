@@ -1,7 +1,10 @@
+import Navigation from "../components/Navigation";
+
 const About = () => (
-  <div>
+<div>
+    <Navigation />
     <h1>A propos</h1>
-  </div>
+</div>
 );
 
 // == Export

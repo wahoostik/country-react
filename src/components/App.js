@@ -1,6 +1,6 @@
-import Home from '../../pages/Homes';
-import NotFound from '../../pages/NotFound';
-import About from '../../pages/About';
+import Home from '../pages/Home';
+import NotFound from '../pages/NotFound';
+import About from '../pages/About';
 import { Switch, Route } from 'react-router-dom';
 
 function App() {

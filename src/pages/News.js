@@ -5,7 +5,11 @@ const News = () => (
 <div className='news-container'>
     <Navigation />
     <Logo />
-        <h1>Composant : News</h1>
+        <form>
+            <input type="text" placeholder="Nom" />
+            <textarea placeholder="Message"></textarea>
+            <input type="submit" value="Envoyer" />
+        </form>
 </div>
 );
 

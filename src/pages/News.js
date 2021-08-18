@@ -32,7 +32,7 @@ const News = () => {
             <input type="submit" value="Envoyer" />
         </form>
             <ul>{newsData.map((article) => (
-                <Article key={article.id}/>
+                <Article key={article.id} props={article}/>
             ))}</ul>
 </div>
 )};

@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "author": "Walter White",
+      "content": "You clearly don't know who you're talking to, so let me clue you in. I am not in danger, Skyler. I am the danger. A guy opens his door and gets shot, and you think that of me? No I am the one who knocks!",
+      "date": 1621530288602,
+      "id": 1
+    },
+    {
+      "author": "Saul Goodman",
+      "content": "Don't Drink And Drive, But When You Do, Call Saul.",
+      "date": 1621536029778,
+      "id": 2
+    },
+    {
+      "author": "Jesse Pinkman",
+      "content": "Mr. White… He’s The Devil. You Know, He Is…Smarter Than You, He Is Luckier Than You.",
+      "date": 1621536057628,
+      "id": 3
+    },
+    {
+      "author": "Roger « Verbal » Kint",
+      "content": "Le coup le plus rusé que le diable ait jamais réussi, c’est de faire croire à tout le monde qu’il n’existait pas.",
+      "date": 1621536051583,
+      "id": 4
+    },
+    {
+      "author": "Don Vito Corleone",
+      "content": "Je vais lui faire une offre qu'il ne pourra pas refuser.",
+      "date": 1621536051987,
+      "id": 5
+    }
+  ]
+}

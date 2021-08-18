@@ -58,7 +58,7 @@ return (
     <ul className='countries-list'>
       {data
         .filter((country) => country.region.includes(selectedRadio))
-        // réduire le nombre de pays avec l'input range
+        // réduire ou augmenter le nombre de pays avec l'input range
         .sort((a, b) => b.population - a.population)
         .filter((country, index) => index < rangeValue)
         .map((country) => (

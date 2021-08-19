@@ -2,9 +2,9 @@
 
 // == Composant
 const Logo = () => (
-  <div className='logo'>
+    <div className='logo'>
         <h3>Countries in the Wolrd</h3>
-  </div>
+    </div>
 );
 
 // == Export

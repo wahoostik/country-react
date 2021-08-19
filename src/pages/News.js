@@ -1,8 +1,8 @@
-import Logo from "../components/Logo";
-import Navigation from "../components/Navigation";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import Article from "../components/Article";
+import Logo from '../components/Logo';
+import Navigation from '../components/Navigation';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Article from '../components/Article';
 
 const News = () => {
     const [newsData, setNewsData] = useState([]);
@@ -19,23 +19,23 @@ const News = () => {
     };
 
     useEffect(() => {
-    getData();
+        getData();
     }, []);
 
     return (    
-<div className='news-container'>
-    <Navigation />
-    <Logo />
-        <form>
-            <input type="text" placeholder="Nom" />
-            <textarea placeholder="Message"></textarea>
-            <input type="submit" value="Envoyer" />
-        </form>
+        <div className='news-container'>
+            <Navigation />
+            <Logo />
+            <form>
+                <input type="text" placeholder="Nom" />
+                <textarea placeholder="Message"></textarea>
+                <input type="submit" value="Envoyer" />
+            </form>
             <ul>{newsData.map((article) => (
-                <Article key={article.id} props={article}/>
+                <Article key={article.id} articles={article}/>
             ))}</ul>
-</div>
-)};
+        </div>
+    );};
 
 // == Export
 export default News;

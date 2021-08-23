@@ -34,12 +34,13 @@ const News = () => {
                     date: Date.now(),
                 });
                 console.log(send);
+            } catch (error) {
+                console.trace(error);
+            } finally {
                 setAuthor('');
                 setContent('');
                 getData();
                 setError(false);
-            } catch (error) {
-                console.trace(error);
             }
         }
     };

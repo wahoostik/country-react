@@ -18,6 +18,21 @@ const News = () => {
         }
     };
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        console.log('submit');
+        try {
+            const send = await axios.post(baseUrl, {
+                author: 'Anthony',
+                content: 'Test Axios Post',
+                date: Date.now(),
+            });
+            console.log(send);
+        } catch (error) {
+            console.trace(error);
+        }
+    };
+
     useEffect(() => {
         getData();
     }, []);
@@ -26,7 +41,7 @@ const News = () => {
         <div className='news-container'>
             <Navigation />
             <Logo />
-            <form>
+            <form onSubmit={(event) => handleSubmit(event)}>
                 <input type="text" placeholder="Nom" />
                 <textarea placeholder="Message"></textarea>
                 <input type="submit" value="Envoyer" />

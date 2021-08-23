@@ -6,6 +6,8 @@ import Article from '../components/Article';
 
 const News = () => {
     const [newsData, setNewsData] = useState([]);
+    const [author, setAuthor] = useState('');
+    const [content, setContent] = useState('');
 
     const baseUrl = 'http://localhost:3004/articles';
 
@@ -23,11 +25,14 @@ const News = () => {
         console.log('submit');
         try {
             const send = await axios.post(baseUrl, {
-                author: 'Anthony',
-                content: 'Test Axios Post',
+                author: author,
+                content: content,
                 date: Date.now(),
             });
             console.log(send);
+            setAuthor('');
+            setContent('');
+            getData();
         } catch (error) {
             console.trace(error);
         }
@@ -41,10 +46,22 @@ const News = () => {
         <div className='news-container'>
             <Navigation />
             <Logo />
-            <form onSubmit={(event) => handleSubmit(event)}>
-                <input type="text" placeholder="Nom" />
-                <textarea placeholder="Message"></textarea>
-                <input type="submit" value="Envoyer" />
+            <form
+                onSubmit={(event) => handleSubmit(event)}>
+                <input
+                    onChange={(event) => setAuthor(event.target.value)}
+                    type="text"
+                    placeholder="Nom"
+                    value={author}
+                />
+                <textarea
+                    onChange={(event) => setContent(event.target.value)}
+                    placeholder="Message"
+                    value={content}
+                ></textarea>
+                <input
+                    type="submit"
+                    value="Envoyer" />
             </form>
             <ul>{newsData
                 // pour trier les messages du plus récent au plus ancien

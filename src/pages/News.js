@@ -31,9 +31,12 @@ const News = () => {
                 <textarea placeholder="Message"></textarea>
                 <input type="submit" value="Envoyer" />
             </form>
-            <ul>{newsData.map((article) => (
-                <Article key={article.id} articles={article}/>
-            ))}</ul>
+            <ul>{newsData
+                // pour trier les messages du plus récent au plus ancien
+                .sort((a, b) => b.date - a.date)
+                .map((article) => (
+                    <Article key={article.id} articles={article}/>
+                ))}</ul>
         </div>
     );};
 

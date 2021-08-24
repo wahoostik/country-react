@@ -10,7 +10,7 @@ const News = () => {
     const [content, setContent] = useState('');
     const [error, setError] = useState(false);
 
-    const baseUrl = 'http://localhost:3004/articles';
+    const baseUrl = 'http://localhost:3004/articles/';
 
     const getData = async () => {
         try {

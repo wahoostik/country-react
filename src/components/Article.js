@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import axios from 'axios';
+import DeleteArticle from './DeleteArticle';
 
 const Article = ({ articles }) => {
     const [isEditing, setIsEditing] = useState(false);
@@ -53,7 +54,7 @@ const Article = ({ articles }) => {
                 ) : (
                     <button onClick={() => setIsEditing(true)}>Edit</button> 
                 )}
-                <button>Delete</button>
+                <DeleteArticle id={articles.id} />
             </div>
         </div>
     );

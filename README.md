@@ -15,7 +15,7 @@ Lancer la commande yarn server pour lancer le json-server. Le serveur se lance s
 - server `yarn server`
 
 Lancer la commande yarn start pour lancer l'application. L'application se lance sur le port 3000.
-- server `yarn server`
+- start application `yarn start`
 
 ### Codé avec
 

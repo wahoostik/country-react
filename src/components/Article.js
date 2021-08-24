@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 // == Import
 import PropTypes from 'prop-types';
 import { useState } from 'react';
@@ -11,7 +10,7 @@ const Article = ({ articles }) => {
     const baseUrl = 'http://localhost:3004/articles/';
     const data = {
         author: articles.author,
-        content: editedContent,
+        content: editedContent ? editedContent : articles.content,
         date: articles.date,
         id: articles.id
     };
@@ -43,10 +42,10 @@ const Article = ({ articles }) => {
                 <textarea
                     onChange={(event) => setEditedContent(event.target.value)}
                     autoFocus
-                    defaultValue={articles.content}>
+                    defaultValue={editedContent ? editedContent : articles.content}>
                 </textarea>
             ) : (
-                <p>{articles.content}</p>  
+                <p>{editedContent ? editedContent : articles.content}</p>  
             )}
             <div className="btn-container">
                 {isEditing ? (
